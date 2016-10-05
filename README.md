@@ -8,6 +8,7 @@
 2.多个编辑器在同一页面之中，需要做以下修改,打开wangEditor.js,找到c.fn.bindEvent,在其下面 g = function(o) {}函数体内添加   window.activeEditor = i.editor,或者直接使用本项目中的wangEditor.min.js。  
 3.不支持IE9以下浏览器。  
 4.建议服务端在接受数据时，对base64数据进行转换并保存成图片文件，然后替换掉图片的src。  
+5.个别环境下(如github pages以及使用node进行静态资源解析)，会出现公式小幅错位现象，此应为Kity Formula的bug，原因未知，实际测试使用nginx,apache及各种云存储处理静态资源均无问题，大部分情况下不影响生产环境使用，有处理方法了欢迎提pull request，表示感谢。
 #效果预览
 ![preview1](https://github.com/zhangyanzt/wangEditorWithFormula/raw/master/preview1.png "preview1")
 ![preview2](https://github.com/zhangyanzt/wangEditorWithFormula/raw/master/preview2.png "preview2")
