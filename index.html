@@ -9,12 +9,6 @@
 	<script src="kityformula/js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="editor/js/wangEditor.min.js"></script>
 	<script type="text/javascript" src="editor/js/custom-menu.js"></script>
-	<style type="text/css">
-	/*.kity-formula:{
-		position: relative;
-		z-index: 999;
-	}*/
-	</style>
 </head>
 
 <body>
@@ -44,15 +38,13 @@
 
 
 		var editor1 = new wangEditor('editor1');
-		window.currentEditor = editor1;
-		var index = 109;
+		window.activeEditor = editor1;
+		var index = 999;
 		editor1.config.menus = [
 			'source',
 			'|',
 			'bold',
-			// 通过自定义菜单，让新配置的菜单显示在页面中。
-			// 上文已经确定，新配置的『缩进』菜单id为 'indent'
-			'symbol'
+			'symbol'//'公式插入标志'
 		];
 		editor1.create();
 		editor1.$editorContainer.css('z-index', index-=1)
@@ -63,8 +55,6 @@
 			'source',
 			'|',
 			'bold',
-			// 通过自定义菜单，让新配置的菜单显示在页面中。
-			// 上文已经确定，新配置的『缩进』菜单id为 'indent'
 			'symbol'//'公式插入标志'
 		];
 		editor2.create();
