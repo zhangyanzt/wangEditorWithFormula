@@ -9,4 +9,4 @@
 4.建议服务端在接受数据时，对base64数据进行转换并保存成图片文件，然后替换掉图片的src。  
 #效果预览
 ![preview1](https://github.com/zhangyanzt/wangEditorWithFormula/raw/master/preview1.png "preview1")
-![preview2](https://github.com/zhangyanzt/wangEditorWithFormula/raw/master/preview1.png "preview2")
+![preview2](https://github.com/zhangyanzt/wangEditorWithFormula/raw/master/preview2.png "preview2")
