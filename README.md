@@ -1,8 +1,8 @@
 # wangEditorWithFormula
 针对wangEditor适配Kity Formula公式编辑插件
 #使用方法
-直接部署在web环境下即可预览效果(直接打开index.html无法正常工作),生成的公式会以base64图片的形式插入到编辑器中。
-[预览](https://zhangyanzt.github.io/wangEditorWithFormula/)
+直接部署在web环境下即可查看效果(直接打开index.html无法正常工作),生成的公式会以base64图片的形式插入到编辑器中。
+[预览效果](https://zhangyanzt.github.io/wangEditorWithFormula/)
 #注意事项
 1.公式编辑器需要通过全局变量activeEditor来确定活动的编辑器，当页面中只有一个编辑器时，可以直接使用官方的js文件，只需在实例化编辑器(如:editor)之后,在之后添加:window.activeEditor = editor  
 2.多个编辑器在同一页面之中，需要做以下修改,打开wangEditor.js,找到c.fn.bindEvent,在其下面 g = function(o) {}函数体内添加   window.activeEditor = i.editor,或者直接使用本项目中的wangEditor.min.js。  
