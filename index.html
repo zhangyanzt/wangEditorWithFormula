@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="editor/css/wangEditor.min.css">
+
+	<script src="kityformula/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="editor/js/wangEditor.min.js"></script>
+	<script type="text/javascript" src="editor/js/custom-menu.js"></script>
+	<style type="text/css">
+	/*.kity-formula:{
+		position: relative;
+		z-index: 999;
+	}*/
+	</style>
+</head>
+
+<body>
+
+	<div style="width: 800px;margin:0 auto">
+
+		<div id="editor1" style="height:400px;max-height:300px;">
+			<p>请输入内容…</p>
+		</div>
+
+
+		<div id="editor2" style="height:400px;max-height:300px;">
+			<p>请输入内容…</p>
+		</div>
+
+
+	</div>
+
+
+
+	<!--  <iframe id="editor" src="ed.html" frameborder="0" width="800" height="510"></iframe>
+
+ <button id="downloadBtn">导出为图片</button><span id="saveHint">*点击保存为 png 图片</span>
+<script src="kityformula/js/jquery-1.11.0.min.js"></script> -->
+	<script>
+
+
+
+		var editor1 = new wangEditor('editor1');
+		window.currentEditor = editor1;
+		var index = 109;
+		editor1.config.menus = [
+			'source',
+			'|',
+			'bold',
+			// 通过自定义菜单，让新配置的菜单显示在页面中。
+			// 上文已经确定，新配置的『缩进』菜单id为 'indent'
+			'symbol'
+		];
+		editor1.create();
+		editor1.$editorContainer.css('z-index', index-=1)
+
+
+		var editor2 = new wangEditor('editor2');
+		editor2.config.menus = [
+			'source',
+			'|',
+			'bold',
+			// 通过自定义菜单，让新配置的菜单显示在页面中。
+			// 上文已经确定，新配置的『缩进』菜单id为 'indent'
+			'symbol'//'公式插入标志'
+		];
+		editor2.create();
+		editor2.$editorContainer.css('z-index', index-=1)
+	</script>
+
+</body>
+
+</html>
